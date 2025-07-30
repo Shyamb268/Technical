@@ -161,12 +161,8 @@ flowchart TD
   - Use any Verilog simulator (e.g., Icarus Verilog, ModelSim)
   - (Optional) Write testbenches for ALU, register file, or top-level CPU
 
----
-
-## 9. Screen Recording Link
-- [Insert your Google Drive link here]
 
 ---
 
-## 10. Conclusion
+## 9. Conclusion
 This project demonstrates a custom 19-bit CPU architecture tailored for signal processing, with a flexible instruction set and modular Verilog implementation. The design can be extended with more custom instructions or optimized pipeline stages for further performance improvements. 
