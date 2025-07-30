@@ -2,19 +2,21 @@ module cpu19 (
     input wire clk,
     input wire reset
 );
-    // Program Counter
-    reg [18:0] pc;
-    // Pipeline registers (placeholders)
-    reg [18:0] instr_reg, alu_out_reg, mem_out_reg;
-    reg [18:0] reg_rs1, reg_rs2;
-    reg [18:0] regfile_out1, regfile_out2;
-    wire [18:0] alu_result;
-    wire alu_zero;
-    wire [4:0] opcode;
-    wire [3:0] rd, rs1, rs2;
-    wire [9:0] imm;
-    wire [13:0] addr;
-    wire fft_done;
+
+//Program Counter
+   reg[18:0] pc;
+//pipeline registers
+reg [18:0] instr_reg, alu_out_reg, memory_out_reg;
+reg [18:0] reg_rs1, reg_rs2;
+reg [18:0] reg_file_out1, regfile_rs2;
+wire [18:0] alu_result;
+wire alu_zero;
+wire [4:0]opcode;
+wire[3:0]rd, rs1, rs2;
+wire [9:0] imm;
+wire [13:0] addr;
+
+wire fft_done;
 
     // Instantiate Control Unit
     control_unit CU (
