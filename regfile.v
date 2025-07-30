@@ -8,16 +8,18 @@ module regfile (
     output wire [18:0] rs1,
     output wire [18:0] rs2
 );
-    reg [18:0] regs [0:15];
 
-    // Read ports
-    assign rs1 = regs[rs1_addr];
-    assign rs2 = regs[rs2_addr];
+reg [18:0] regs [0:15];
 
-    // Write port
-    always @(posedge clk) begin
-        if (we) begin
-            regs[rd_addr] <= wd;
-        end
+//read ports
+assign rs1 = regs[rs1_addr];
+assign rs2 = regs[rs2_addr];
+
+//write port
+always@(posedge clk) begin
+    if (we) begin
+        regs[rd_addr] <= wd;
     end
-endmodule 
+end
+
+endmodule
